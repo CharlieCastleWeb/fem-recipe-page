@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "Outfit";
+  src: url("../../assets/fonts/outfit/Outfit-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Young Serif";
+  src: url("../../assets/fonts/young-serif/YoungSerif-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+$font-family-body: "Outfit", sans-serif;
+$font-family-heading: "Young Serif", serif;
+
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-md: 16px;
+$font-size-lg: 20px;
+$font-size-xl: 28px;
+$font-size-2xl: 32px;
+$font-size-3xl: 40px;
+
+@mixin text-preset(
+  $font-size,
+  $font-family,
+  $font-weight: 400,
+  $line-height: 1,
+  $font-style: normal
+) {
+  font-size: $font-size;
+  font-family: $font-family;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  font-style: $font-style;
+}
+
+@mixin text-preset-1 {
+  @include text-preset($font-size-3xl, $font-family-heading);
+}
+@mixin text-preset-2 {
+  @include text-preset($font-size-xl, $font-family-heading);
+}
+@mixin text-preset-3 {
+  @include text-preset($font-size-lg, $font-family-body, 600);
+}
+@mixin text-preset-4 {
+  @include text-preset($font-size-md, $font-family-body, 400, 1.5);
+}
+@mixin text-preset-5 {
+  @include text-preset($font-size-md, $font-family-body, 700, 1.5);
+}
