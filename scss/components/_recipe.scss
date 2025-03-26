@@ -1,0 +1,157 @@
+@use "../settings" as *;
+
+.recipe {
+  background-color: $c-white;
+  width: 100%;
+
+  @media (min-width: $breakpoint-sm) {
+    border-radius: $border-radius-lg;
+    margin: 0 auto;
+    margin-bottom: $spacer-4xl;
+    margin-top: $spacer-4xl;
+    max-width: $recipe-max-width-md;
+    padding: $spacer-2xl;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    max-width: $recipe-max-width-lg;
+  }
+
+  &__image {
+    @media (min-width: $breakpoint-sm) {
+      border-radius: $border-radius-md;
+      margin-bottom: $spacer-2xl;
+    }
+  }
+
+  &__content {
+    padding: $spacer-2xl $spacer-xl;
+    @media (min-width: $breakpoint-sm) {
+      padding: 0;
+    }
+  }
+
+  &__title {
+    color: $c-stone-900;
+    margin-bottom: $spacer-lg;
+    @include text-preset-1;
+  }
+
+  &__description {
+    color: $c-stone-600;
+    margin-bottom: $spacer-xl;
+    @include text-preset-4;
+  }
+
+  &__preparation {
+    background-color: $c-rose-50;
+    margin-bottom: $spacer-xl;
+    padding: $spacer-lg;
+  }
+
+  &__preparation-title {
+    color: $c-rose-800;
+    margin-bottom: $spacer-md;
+    @include text-preset-3;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__preparation-item {
+    align-items: center;
+    color: $c-stone-600;
+    display: flex;
+    margin-bottom: $spacer-xs;
+    @include text-preset-4;
+    &::before {
+      color: $c-rose-800;
+      content: "•";
+      font-size: 1.5rem;
+      margin-left: $spacer-xs;
+      margin-right: $spacer-lg;
+    }
+  }
+
+  &__section-title {
+    color: $c-brown-800;
+    margin-bottom: $spacer-lg;
+    @include text-preset-2;
+  }
+
+  &__ingredients {
+    border-bottom: 1px solid $c-stone-150;
+    margin-bottom: $spacer-xl;
+    padding-bottom: $spacer-xl;
+  }
+
+  &__ingredients-item {
+    align-items: center;
+    color: $c-stone-600;
+    display: flex;
+    margin-bottom: $spacer-xs;
+    @include text-preset-4;
+    &::before {
+      color: $c-brown-800;
+      content: "•";
+      font-size: 1.5rem;
+      margin-left: $spacer-xs;
+      margin-right: $spacer-lg;
+    }
+  }
+
+  &__instructions {
+    border-bottom: 1px solid $c-stone-150;
+    margin-bottom: $spacer-xl;
+    padding-bottom: $spacer-xl;
+  }
+
+  &__instructions-list {
+    padding-left: $spacer-lg;
+  }
+
+  &__instructions-item {
+    color: $c-stone-600;
+    margin-bottom: $spacer-xs;
+    padding-left: $spacer-lg;
+    @include text-preset-4;
+    &::marker {
+      color: $c-brown-800;
+      font-weight: bold;
+    }
+  }
+
+  &__nutrition-description {
+    color: $c-stone-600;
+    margin-bottom: $spacer-lg;
+    @include text-preset-4;
+  }
+
+  &__nutrition-table {
+    border-collapse: collapse;
+    width: 100%;
+    td {
+      border-bottom: 1px solid $c-stone-150;
+      padding-bottom: $spacer-sm;
+      padding-top: $spacer-sm;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+  }
+
+  &__nutrition-label {
+    color: $c-stone-600;
+    padding-left: $spacer-xl;
+    @include text-preset-4;
+  }
+
+  &__nutrition-value {
+    color: $c-brown-800;
+    font-weight: bold;
+    @include text-preset-4;
+  }
+}
