@@ -65,7 +65,7 @@
     align-items: center;
     color: $c-stone-600;
     display: flex;
-    margin-bottom: $spacer-xs;
+    margin-bottom: $spacer-2xs;
     @include text-preset-4;
     &::before {
       color: $c-rose-800;
@@ -92,7 +92,7 @@
     align-items: center;
     color: $c-stone-600;
     display: flex;
-    margin-bottom: $spacer-xs;
+    margin-bottom: $spacer-2xs;
     @include text-preset-4;
     &::before {
       color: $c-brown-800;
@@ -115,7 +115,7 @@
 
   &__instructions-item {
     color: $c-stone-600;
-    margin-bottom: $spacer-xs;
+    margin-bottom: $spacer-2xs;
     padding-left: $spacer-lg;
     @include text-preset-4;
     &::marker {
